@@ -1,0 +1,39 @@
+#main{
+    margin-top: -8px;
+    margin-left: -8px;
+    
+}
+
+img {
+    width: 1900px;
+    height: 940px;
+}
+
+#day {
+    position: relative;
+}
+
+#night {
+    position: absolute;
+    margin-top: -472px;
+}
+
+#clock {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #ffffff;
+    font-size: 60px;
+    font-family: 'Unica One';
+    letter-spacing: 8px;
+    z-index: 3;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+}
+
+#clock .info {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Unica One';
+    letter-spacing: 7px;
+}
