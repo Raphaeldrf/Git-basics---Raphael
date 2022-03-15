@@ -1,12 +1,12 @@
-var night = document.getElementById('night');
+// var night = document.getElementById('night');
 
-document.getElementById('dayButton').onclick = function(){
-    night.classList.add('changeOpacity');
-};
+// document.getElementById('dayButton').onclick = function(){
+//     night.classList.add('changeOpacity');
+// };
 
-document.getElementById('nightButton').onclick = function(){
-    night.classList.remove('changeOpacity');
-};
+// document.getElementById('nightButton').onclick = function(){
+//     night.classList.remove('changeOpacity');
+// };
 
 function showTime(){
     var date = new Date();
@@ -26,10 +26,11 @@ function showTime(){
     for (var i = 0; i < ids.length; i++)
     document.getElementById(ids[i]).firstChild.nodeValue = values[i];
 
-    /*if(h > 19){
-        function(){
-            night.classList.add('changeOpacity');
-    }*/
+    if(h > 10 && h < 20){
+        night.classList.add('changeOpacity');
+    } else {
+        night.classList.remove('changeOpacity');
+    }
 
     h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
