@@ -1,0 +1,69 @@
+body {
+  margin: 5vh 5vw;
+  background-image:url('../images/earth.jpg');
+  background-size: cover;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#map {
+  height: 90vh;
+  width: 30vw;
+  border-style: solid double;
+  border-color: #9b9fb2;
+  border-width: 3px;
+}
+
+#form {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#getWeather{
+  margin: 10%;
+  
+}
+
+#hetweer {
+  width: 30vw;
+  border-style: solid double;
+  border-color: #9b9fb2;
+  border-width: 3px;
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background: rgba(108, 145, 191, 0.3);
+}
+
+#result {
+  font-size: 3em;
+	background-color: ;
+	width: 200px;
+	padding: 6px;
+	text-align: center;
+  margin-bottom: 20%;
+}
+
+#cityName{
+  font-size: 3em;
+  margin-bottom: 10%;
+}
+
+form .button{
+  height: 45px;
+}
+form .button input{
+  height: 100%;
+  width: 100%;
+}

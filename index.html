@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<title>MarsClock</title>
-		<link type="text/css" href="styles/my_style.css" rel="stylesheet" /> 
-		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Unica One">
-		<script  src="scripts/my_scripts.js" defer></script>
+		<meta charset="utf-8">
+		<title>MapBox</title>
+		<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+		<script src="scripts/main.js" defer></script>
+		<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="styles/base.css" rel="stylesheet" />
 	</head>
 	<body>
-		<section id="clock">
-			<div class="dateInfo">
-				<span id="dayname">Day</span>
-				<span> - </span>
-				<span id="month">Month</span>
-				<span id="daynum">00</span>
-				<span> - </span>
-				<span id="year">Year</span>
-			</div>
-			
-			<div id="DigitalCLOCK" class="clock" onload="showTime()"></div>
+		<div id="container">
+			<div id="map"></div>
 
-			<!-- <button id="dayButton">Day</button>
-			<button id="nightButton">Night</button> -->
-		</section>
-		
-		<section id="main">
-			<div id="day">
-				
+			<div id="hetweer">
+				<span id="cityName">City</span>
+				<article id="result">The weather</article>
+				<form>
+					<fieldset id="form">
+						<legend>What is the weather in:</legend>
+						<input type="text" name="city" id="city" />
+						<input type="button" id="getWeather" value="Get current weather" />
+					</fieldset>
+					<div class="button">
+						<!-- <input id="getWeather" type="submit" value="Get current weather"> -->
+					</div>
+				</form>
 			</div>
-			<div id="night">
-				
-			</div>
-			<div id="logo">
-				<img src="images/Logo.png" alt="Logo">
-			</div>
-			<div id="Man1Night">
-				<img src="images/Man1Night.png" alt="Man1Night" width="76" height="76px">
-			</div>
-			<div id="Man2Night">
-				<img src="images/Man2Night.png" alt="Man2Night" width="76" height="76px">
-			</div>
-		</section>
+		</div>	
 	</body>
 </html>
