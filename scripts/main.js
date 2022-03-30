@@ -12,6 +12,7 @@ var map = new mapboxgl.Map({
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
+// Markers
 var elmamabbq = new mapboxgl.Popup().setHTML('<h1>Restaurant</h1><h3>El Mama BBQ</h3><p>Hier hebben ze de lekkerste spareribs</p>');
 var marker1 = new mapboxgl.Marker()
   .setLngLat([4.310019438636989, 52.076027883176025])
