@@ -4,22 +4,38 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicmFwaGFlbGRyZiIsImEiOiJjbDFheDloZHAyMmhjM2Jxe
 // Initialate map
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/satellite-v9',
+  style: 'mapbox://styles/raphaeldrf/cl1df7pqx002w15myia660k7v',
   center: [4.322840, 52.067101],
-  zoom: 15
+  zoom: 13
 });
 
 // Add zoom and rotation controls to the map.
-// map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new mapboxgl.NavigationControl());
 
+var elmamabbq = new mapboxgl.Popup().setHTML('<h1>Restaurant</h1><h3>El Mama BBQ</h3><p>Hier hebben ze de lekkerste spareribs</p>');
+var marker1 = new mapboxgl.Marker()
+  .setLngLat([4.310019438636989, 52.076027883176025])
+  .setPopup(elmamabbq)
+  .addTo(map);
 
+var teds = new mapboxgl.Popup().setHTML('<h1>Lunchroom</h1><h3>TEDS</h3><p>Hier kan je lekker lunchen</p>');
+var marker1 = new mapboxgl.Marker()
+	.setLngLat([4.310522313660262, 52.087585020337926])
+	.setPopup(teds)
+	.addTo(map);
+
+var harbor = new mapboxgl.Popup().setHTML('<h1>Club</h1><h3>The Harbor Club</h3><p>Exclusief visrestaurant</p>');
+var marker1 = new mapboxgl.Marker()
+	.setLngLat([4.334153677408797, 52.074271548649946])
+	.setPopup(harbor)
+	.addTo(map);
 
 function getAPIdata() {
 
 	var url = 'https://api.openweathermap.org/data/2.5/weather';
 	var apiKey ='392adfd106910053116827ef5650e109';
 	var city = document.getElementById('city').value;
-  cityName.innerHTML = city;
+  	cityName.innerHTML = city;
 
 	// construct request
 	var request = url + '?' + 'appid=' + apiKey + '&' + 'q=' + city;

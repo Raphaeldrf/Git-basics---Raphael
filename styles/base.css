@@ -18,6 +18,10 @@ body {
   border-width: 3px;
 }
 
+#logo{
+
+}
+
 #form {
   border: none;
   display: flex;
